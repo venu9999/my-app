@@ -6,7 +6,7 @@
                 {
                     "hostPort": 80,
                     "protocol": "tcp",
-                    "containerPort": 8080
+                    "containerPort": 80
                 }
             ],
             "image": "651188399649.dkr.ecr.ap-southeast-2.amazonaws.com/catalog-demo:latest_0.0",
