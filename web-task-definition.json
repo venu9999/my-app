@@ -1,0 +1,24 @@
+{
+    "executionRoleArn": "arn:aws:iam::651188399649:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+        {
+            "portMappings": [
+                {
+                    "hostPort": 8080,
+                    "protocol": "tcp",
+                    "containerPort": 8080
+                }
+            ],
+            "image": "651188399649.dkr.ecr.ap-southeast-2.amazonaws.com/catalog-demo:latest_0.0",
+            "name": "tomcat-web"
+        }
+    ],
+    "memory": "1024",
+    "taskRoleArn": "arn:aws:iam::651188399649:role/ecsTaskExecutionRole",
+    "family": "catalog-demo",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "512"
+}
