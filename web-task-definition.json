@@ -4,13 +4,13 @@
         {
             "portMappings": [
                 {
-                    "hostPort": 80,
+                    "hostPort": 8080,
                     "protocol": "tcp",
-                    "containerPort": 80
+                    "containerPort": 8080
                 }
             ],
             "image": "651188399649.dkr.ecr.ap-southeast-2.amazonaws.com/catalog-demo:latest_0.0",
-            "name": "nginx"
+            "name": "tomcat-web"
         }
     ],
     "memory": "1024",
