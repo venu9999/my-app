@@ -45,7 +45,7 @@ pipeline{
                     sed -e "s/latest_0.0/latest_$BUILD_ID/g" web-task-definition.json > web-task-definition1.json
                     aws ecs register-task-definition --cli-input-json file://web-task-definition1.json
                     Newversion=$(aws ecs describe-task-definition --task-definition catalog-demo | egrep "revision" | tr "/" " " | awk \'{print $2}\' | sed \'s/"$//\' | tr ',' '\n') 
-                    aws ecs update-service --cluster default --service tomcat-web --task-definition catalog-demo:${Newversion}
+                    aws ecs update-service --cluster default --service tomcat-web-service --task-definition catalog-demo:${Newversion}
 					'''
                 }
             }
